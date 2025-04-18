@@ -14,6 +14,9 @@ find_package(Boost 1.66.0 REQUIRED COMPONENTS system)
 
 add_executable(join_server 
 main.cpp
+Database.cpp Database.h
+Server.cpp Server.h
+Session.cpp Session.h
 )
 
 set_target_properties(join_server PROPERTIES
@@ -31,13 +34,13 @@ else ()
     target_compile_options(join_server PRIVATE -Wall -Wextra -pedantic) 
 endif()
 
-#install(TARGETS join_server RUNTIME DESTINATION bin)
-# set(CPACK_GENERATOR DEB)
-# set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
-# set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
-# set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
-# set(CPACK_PACKAGE_CONTACT example@example.com)
-# include(CPack)
+install(TARGETS join_server RUNTIME DESTINATION bin)
+set(CPACK_GENERATOR DEB)
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+set(CPACK_PACKAGE_CONTACT example@example.com)
+include(CPack)
 
 
 
