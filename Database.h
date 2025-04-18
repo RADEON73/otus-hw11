@@ -1,6 +1,11 @@
 #pragma once
 #include <unordered_map>
 #include <mutex>
+#include <string>
+#include <string_view>
+#include <vector>
+#include <tuple>
+#include <algorithm>
 
 /**
  * @brief Структура записи таблицы.

@@ -2,6 +2,8 @@
 #include "Database.h"
 #include <boost/asio.hpp>
 #include <queue>
+#include <memory>
+#include <string>
 
 using boost::asio::ip::tcp;
 

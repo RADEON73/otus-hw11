@@ -1,8 +1,4 @@
 #include "Database.h"
-#include <algorithm>
-#include <string>
-#include <tuple>
-#include <vector>
 
 bool Database::insert(const std::string_view& table, int id, const std::string& name)
 {

@@ -1,8 +1,6 @@
 #include "Session.h"
 #include <format>
 #include <vector>
-#include <memory>
-#include <string>
 
 Session::Session(tcp::socket socket, Database& db) : socket_(std::move(socket)), db_(db)
 {}
